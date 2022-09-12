@@ -1,0 +1,84 @@
+mass_type = ("kg", "g", "oz", "lb")
+print("Please select one of the following options")
+for i in range(len(mass_type)):
+    print(i +1, mass_type[i])
+choice = int(input())
+if 1 <= choice <= len(mass_type):
+    if choice == 1:
+        X2 = int(input("Mass(kg): "))
+    elif choice == 2:
+        X2 = int(input("Mass(g): "))
+        X2 = X2 / 1000
+    elif choice == 3:
+        X2 = int(input("Mass(oz): "))
+        X2 = X2 / 35.27396
+    elif choice == 4:
+        X2 = int(input("Mass(lb): "))
+        X2 = X2 / 2.204623
+
+velocity_type = ("m/s", "m/min", "cm/s", "km/h", "ft/s", "mph", "ft/min")
+print("Please select one of the following options")
+for g in range(len(velocity_type)):
+    print(g +1, velocity_type[g])
+choice2 = int(input())
+if 1 <= choice2 <= len(velocity_type):
+    if choice2 == 1:
+        Y2 = int(input("Velocity(m/s): "))
+    elif choice2 == 2:
+        Y2 = int(input("Velocity(m/min): "))
+        Y2 = Y2 / 60
+    elif choice2 == 3:
+        Y2 = int(input("Velocity(cm/s): "))
+        Y2 = Y2 / 100
+    elif choice2 == 4:
+        Y2 = int(input("Velocity(km/h): "))
+        Y2 = Y2 / 3.6
+    elif choice2 == 5:
+        Y2 = int(input("Velocity(ft/s): "))
+        Y2 = Y2 / 3.281
+    elif choice2 == 6:
+        Y2 = int(input("Velocity(mph): "))
+        Y2 = Y2 / 2.237
+    elif choice2 == 7:
+        Y2 = int(input("Velocity(ft/m): "))
+        Y2 = Y2 / 196.85
+
+Distance_type = ("mm", "cm", "m", "km", "in", "ft", "yd", "mi")
+print("Please select one of the following options")
+for k in range(len(Distance_type)):
+    print(k +1, Distance_type[k])
+choice3 = int(input())
+if 1 <= choice3 <= len(Distance_type):
+    if choice3 == 1:
+        z2 = int(input("Distance(mm): "))
+        z2 = z2 / 1000
+    elif choice3 == 2:
+        z2 = int(input("Distance(cm): "))
+        z2 = z2 / 100
+    elif choice3 == 3:
+        z2 = int(input("Distance(m): "))
+    elif choice3 == 4:
+        z2 = int(input("Distance(km): "))
+        z2 = z2 * 1000
+    elif choice3 == 5:
+        z2 = int(input("Distance(in): "))
+        z2 = z2 / 39.37
+    elif choice3 == 6:
+        z2 = int(input("Distance(ft): "))
+        z2 = z2 / 3.281
+    elif choice3 == 7:
+        z2 = int(input("Distance(yd): "))
+        z2 = z2 / 1.094
+    elif choice3 == 8:
+        z2 = int(input("Distance(mi): "))
+        z2 = z2 * 1609
+
+Mass = X2
+Velocity = Y2 ** 2
+Distance = z2
+
+Mass_Velocity = Mass * Velocity
+
+F = Mass_Velocity / Distance
+
+print(F / 2)
